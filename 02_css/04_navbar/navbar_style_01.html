@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variation 1</title>
+    <style>
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0px;
+        background-color: #0b1b07;
+        color: white;
+    }
+
+    h1 {
+            margin-bottom: 10px; 
+        }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px;
+
+    }
+
+    .Nav-buttons {
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        
+
+    }
+
+    .nav1 {
+        background-color: #fff;
+        justify-content: space-around;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .nav1 ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+    
+    .nav1 li {
+            display: inline;
+
+        }
+    
+    .nav1 a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            background-color: white;
+            display: inline;
+            position: relative;
+    }
+
+    .nav1 .login-btn {
+            background-color: rgb(56, 161, 7);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .nav1 a::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(19, 145, 7);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .nav1 a:hover:after {
+          transform: scaleX(1);
+          
+        }
+
+        .home {
+            position: relative;
+            height: 98vh;
+            overflow: hidden;
+        }
+
+        .home img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3; /* Slight transparency for a cleaner overlay effect */
+        }
+
+        .content {
+            position: absolute;
+            top: 50%; /* Adjust to push text a bit lower */
+            left: 50%;
+            transform: translate(-50%, -25%);
+            text-align: center;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-top: 0.5rem;
+        }
+
+
+    </style>
+    
+  </head>
+  <body>
+    <div class="nav-container">
+      <!-- <h1>Variation 1: Horizontal with underline effect</h1> -->
+       <div class="180DC-logo">
+        <img src="./180Dc.png" width="85px" alt="180DC Logo">
+       </div>
+       <div class="Nav-buttons">
+        <nav class="nav1">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Impact</a></li>
+              <li><a href="#">Team</a></li>
+              <li><button class="login-btn">Be a client</button></li>
+            </ul>
+          </nav>
+       </div>
+
+    </div>
+
+    <div class="home">
+        <div class="content">
+            <h1>180 Degress Consulting</h1>
+            <h2>NIT Warangal</h2>
+        </div>
+        <img src="NIT_WARANGAL_v1_2023-4-1-11-24-46.jpg"  alt="nitw image">
+    </div>
+  </body>
+</html>

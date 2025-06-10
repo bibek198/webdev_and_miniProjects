@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #242020;
+            color: white;
+        }
+
+        .nav-container {
+            margin-bottom: 40px;
+
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .nav1 {
+            
+            background-color: rgb(227, 231, 227);
+            padding: 10px;
+
+        }
+
+        .nav1 ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav1 li {
+            display: inline;
+
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            background-color: rgba(255, 137, 2, 0.856);
+            padding: 5px 15px;
+        }
+
+        .nav1 .login-btn {
+            background-color: rgb(100, 100, 230);
+            color: white;
+        }
+
+        .nav1 a::after {
+            content: "abc";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: aqua;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+
+        .nav1 a:hover:after {
+          transform: scaleX(1);
+          
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="nav-container">
+      <h1>Variation 1: Horizontal with underline effect</h1>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+        <h1>Variation 2: Vertical with hover effect</h1>
+        <nav class="nav2">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><button class="login-btn">Login</button></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-container">
+        <h1>Variation 1: Horizontal with dropdown</h1>
+        <nav class="nav3">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><button class="login-btn">Login</button></li>
+          </ul>
+        </nav>
+      </div>
+
+  </body>
+</html>

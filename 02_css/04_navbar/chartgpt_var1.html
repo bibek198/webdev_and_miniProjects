@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>180DC – NIT Warangal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #38a107;
+      --bg-dark: #0b1b07;
+      --text-light: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container img {
+      height: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      position: relative;
+      font-weight: 500;
+      padding: 6px 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .login-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #2b7f05;
+    }
+
+    /* Hero Section */
+    .home {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .home img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: 1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #dcdcdc;
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2.4rem;
+      }
+
+      .content h2 {
+        font-size: 1.2rem;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-container">
+    <img src="./180Dc.png" alt="180DC Logo" />
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Impact</a></li>
+        <li><a href="#">Team</a></li>
+        <li><button class="login-btn">Be a Client</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home">
+    <img src="NIT_WARANGAL_v1_2023-4-1-11-24-46.jpg" alt="NIT Warangal Background" />
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>180 Degrees Consulting</h1>
+      <h2>NIT Warangal Chapter</h2>
+    </div>
+  </section>
+
+</body>
+</html>
